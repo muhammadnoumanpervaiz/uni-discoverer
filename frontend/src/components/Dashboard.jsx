@@ -34,11 +34,12 @@ const Dashboard = () => {
       countryName,
       universities,
     });
+    console.log("data**", data);
     if (data.error) {
       setAllowUpdateData(true);
     } else {
       setCountryName(null);
-      setUniversities(data.universities);
+      setUniversities(data.res.universities);
     }
   };
 
